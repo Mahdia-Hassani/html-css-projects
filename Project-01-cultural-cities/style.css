@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #F5F5DC ;
+    color: #3b2f2f;
+    line-height: 1.6;
+}
+
+.header {
+    background-image: url(kabul.jpg);
+    color: #fff;
+    padding: 2rem 1rem;
+    position: relative;
+}
+.header h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color:#fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #DAA520  ;
+}
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    color: #8B4513;
+    animation: fadeInUp 1.5s ease forwards;
+}
+@keyframes fadeInUp {
+    0% {
+         opacity: 0; transform: translateY(50px);
+    }
+    100% { 
+        opacity: 1; transform: translateY(0); 
+    }
+}
+
+.hero-title {
+    font-size: 1.5rem;
+}
+
+.hero-text {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.featured-city {
+    padding: 60px 20px;
+    background: url('bamyan1.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.featured-content {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-content:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.city-name {
+    font-family: 'Noto Serif', serif;
+    font-size: 2rem;
+}
+
+.city-image img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.city-facts {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.city-gallery {
+    padding: 60px 20px;
+    background-color: #F5F5DC;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #8B4513;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.city-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.city-card h3 {
+    font-family: 'Noto Serif', serif;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.city-card p {
+    padding: 0 10px 15px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.slideshow {
+    padding: 30px 20px;
+    background-color: #EFE8C9;
+    text-align: center;
+}
+
+.slide-container {
+    border-radius: 12px;
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+    background-image: url('bamyan.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   animation: slider 20s linear infinite;;
+}
+@keyframes slider {
+     0% { 
+        background-image: url('herat.jpg');
+}
+    10% { 
+        background-image: url('bamyan.jpg');
+}
+    25% { 
+        background-image: url('Mazar-e-Sharif.jpg');
+}
+    35% { 
+         background-image: url('Kandahar.jpg');
+}
+    100% {
+         background-image: url('kabul.jpg');
+}
+    
+}
+.submit-city {
+    padding: 60px 20px;
+    background-color: #F5F5DC;
+}
+
+.city-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.city-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+}
+
+.city-form input,
+.city-form textarea {
+    padding: 10px;
+    border: 2px solid #8B4513;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.city-form input:focus,
+.city-form textarea:focus {
+    border-color: #DAA520;
+    transform: scale(1.02);
+    outline: none;
+}
+
+.city-form button {
+    padding: 12px;
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.city-form button:hover {
+    background-color: #DAA520;
+    transform: translateY(-3px);
+}
+
+.footer {
+    background-color: #8B4513;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
